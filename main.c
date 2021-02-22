@@ -33,6 +33,7 @@ void ledToggle() {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wmissing-noreturn"
 #pragma ide diagnostic ignored "OCDFAInspection"
+#pragma ide diagnostic ignored "EndlessLoop"
 int main(void) {
 	//i2cInit();
 	spiInit();
@@ -59,7 +60,7 @@ int main(void) {
 		}
 		ledToggle();
 		iteration++;
-		_delay_ms(20);
+		_delay_ms(1000);
 	}
 	return 0;
 }
